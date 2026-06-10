@@ -15,10 +15,15 @@
 ### About Tina
 - 30 hours of daycare and child safety training at Kingwood Christian Childhood Center in Alabaster
 - Experience as a department head in a daycare setting
-- CPR and First Aid certified
+- CPR, AED, and First Aid certified
 - Currently pursuing accounting classes at Gadsden State
 - Married, has two dogs, enjoys coloring and word puzzles
 - Previously worked corporately as an errand runner
+
+### Hours
+- Monday – Sunday, 8:00am – 10:00pm
+- Flexible scheduling to fit busy professionals' lives
+- Available for emergency situations outside normal hours
 
 ### Tagline
 *"Running out of time? Juggling too much? Pocket Full of Help is here for you!"*
@@ -57,7 +62,7 @@
 
 **Qualifications:**
 - 30 hours training at Kingwood Christian Childhood Center
-- CPR and First Aid certified
+- CPR, AED, and First Aid certified
 - Daycare department head experience
 
 **Best for:** Parents with infants and toddlers needing part-time, in-home childcare
@@ -112,7 +117,8 @@
 |---|---|
 | **Phone** | 256-530-9221 |
 | **Email** | contactpocketfullofhelp@gmail.com |
-| **Facebook** | https://www.facebook.com/profile.php?id=61573014991986 |
+| **Facebook** | https://www.facebook.com/people/Pocket-Full-of-Help/ |
+| **Hours** | Monday – Sunday, 8:00am – 10:00pm (flexible, available for emergencies) |
 | **Booking** | Call, email, or fill out the contact form on the website |
 
 ### Contact Form Fields
@@ -124,7 +130,14 @@
 
 ---
 
-## 6. Common Q&A
+## 6. Reviews & Testimonials
+
+**Care.com Review — Jeremy P. (5.0 stars, verified, 03/19/2026):**
+*"Tina is great. The kids liked her from the start. She communicates well and shows up early. She goes above and beyond to ensure everything runs smooth."*
+
+---
+
+## 7. Common Q&A
 
 **Q: What ages do you provide childcare for?**
 A: Newborns up to 2 years old.
@@ -136,7 +149,13 @@ A: Tina comes to your home — in-home care only.
 A: Up to 4 hours per day.
 
 **Q: Are you CPR certified?**
-A: Yes, Tina is CPR and First Aid certified.
+A: Yes, Tina is CPR, AED, and First Aid certified.
+
+**Q: What are your hours?**
+A: Monday through Sunday, 8:00am to 10:00pm, with flexible scheduling. Tina is also available for emergency situations outside normal hours.
+
+**Q: Do you have any reviews?**
+A: Yes! Tina has a 5.0-star review on Care.com from Jeremy P., who said: "Tina is great. The kids liked her from the start. She communicates well and shows up early. She goes above and beyond to ensure everything runs smooth."
 
 **Q: What types of errands do you run?**
 A: Grocery shopping, prescription pickups, mail/package handling, and business errands.
