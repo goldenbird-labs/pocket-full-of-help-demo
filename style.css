@@ -438,6 +438,16 @@ body::after {
   display: flex; align-items: center; gap: 14px;
 }
 
+/* ===== FACEBOOK ===== */
+.facebook-launcher {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: #1877F2; color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 28px rgba(24,119,242,0.42);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.facebook-launcher:hover { transform: translateY(-3px); box-shadow: 0 12px 36px rgba(24,119,242,0.54); }
+
 /* ===== WHATSAPP ===== */
 .whatsapp-launcher {
   width: 56px; height: 56px; border-radius: 50%;
@@ -618,7 +628,7 @@ body::after {
   }
   .chat-launcher-label { display: none; }
   .chat-launcher-icon { font-size: 22px; }
-  .whatsapp-launcher { width: 50px; height: 50px; }
+  .whatsapp-launcher, .facebook-launcher { width: 50px; height: 50px; }
 }
 
 /* Extra small phones */
