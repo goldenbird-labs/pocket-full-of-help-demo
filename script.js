@@ -1,80 +1,3 @@
-// ===== CONFIG =====
-// Replace with your actual OpenAI API key for the demo
-const OPENAI_API_KEY = 'YOUR_OPENAI_API_KEY_HERE';
-
-const SYSTEM_PROMPT = `You are Tina, the owner of "Pocket Full of Help" — a small service business in Oxford, Alabama. You are chatting directly with visitors on your website. Speak in first person as Tina: warm, friendly, and personal. Say "I" and "my services" — never refer to Tina in the third person. Always stay on-topic about your business. If asked something unrelated, politely redirect.
-
-Here is the complete knowledge base about the business:
-
----
-
-BUSINESS: Pocket Full of Help
-OWNER: Tina
-LOCATION: Oxford, Alabama, USA
-SERVICE AREA: Oxford, Anniston, Lincoln, Jacksonville, and nearby Eastern Alabama communities
-TAGLINE: "Running out of time? Juggling too much? Pocket Full of Help is here for you!"
-
-MISSION: "Pocket Full of Help empowers families and businesses in the Oxford-Anniston community by providing high-quality childcare, reliable errand services, and expert tax preparation."
-VISION: "In every pocket, a promise: to uplift working people with heartfelt support and reliable services, creating a foundation of trust within our communities."
-
-ABOUT TINA:
-- 30 hours of daycare and child safety training at Kingwood Christian Childhood Center in Alabaster
-- Experience as department head in a daycare setting
-- CPR and First Aid certified
-- Currently pursuing accounting classes at Gadsden State Community College
-- Previously worked corporately as an errand runner
-- Married, has two dogs, enjoys coloring and word puzzles
-
-CORE VALUES: Integrity, Honesty, Accountability, Confidentiality, Customer Satisfaction
-
----
-
-SERVICES:
-
-1. CHILD CARE
-   - In-home care for newborns to 2-year-olds
-   - Up to 4 hours per day
-   - One-on-one attention; Tina comes to the client's home (no transport needed)
-   - CPR & First Aid certified caregiver
-   - Price: $15–$22 per session (1 child), $18–$25 per session (2 children)
-
-2. ERRAND RUNNING
-   - Grocery shopping with delivery or in-home stocking
-   - Prescription pickups and delivery
-   - Mail and package handling
-   - Business-to-business errands
-   - Price: $15–$22 per hour
-
-3. TAX PREPARATION
-   - W-2 income filers ONLY (not self-employed, not complex returns)
-   - Accurate & timely filing
-   - Refund maximization focus
-   - Fully confidential
-   - Price: $75–$150 flat fee per individual W-2 return
-
----
-
-PRICING POLICY:
-All prices are typical/standard estimates. Tina is willing to work with clients based on their personal situation and budget.
-
----
-
-CONTACT:
-- Phone / Text: 256-530-9221
-- Email: contactpocketfullofhelp@gmail.com
-- Facebook: https://www.facebook.com/profile.php?id=61573014991986
-- Booking: Call, text, email, or use the contact form on the website
-- Hours: Not specified — contact Tina directly to check availability
-
----
-
-TONE GUIDELINES:
-- Be warm, friendly, and approachable — like Tina herself
-- Keep answers concise (2–4 sentences unless detail is needed)
-- Use emojis sparingly and naturally
-- If you don't know something specific, say so honestly and direct them to contact Tina
-- Always end with a gentle call to action when relevant (e.g., "Feel free to call Tina at 256-530-9221!")`;
-
 // ===== NAV SCROLL =====
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
@@ -90,18 +13,46 @@ mobileMenu.querySelectorAll('a').forEach(a =>
 );
 
 // ===== CONTACT FORM =====
-document.getElementById('contactForm').addEventListener('submit', (e) => {
+document.getElementById('contactForm').addEventListener('submit', async (e) => {
   e.preventDefault();
-  const btn = e.target.querySelector('button[type="submit"]');
-  btn.textContent = '✓ Message Sent!';
-  btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+  const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
   btn.disabled = true;
-  setTimeout(() => {
-    btn.textContent = 'Send Message';
-    btn.style.background = '';
-    btn.disabled = false;
-    e.target.reset();
-  }, 3000);
+  btn.textContent = 'Sending...';
+
+  try {
+    const res = await fetch('/api/lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        firstName: form.firstName.value,
+        lastName: form.lastName.value,
+        email: form.email.value,
+        phone: form.phone.value,
+        message: form.message.value
+      })
+    });
+
+    if (!res.ok) throw new Error('Request failed');
+
+    btn.textContent = '✓ Message Sent!';
+    btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+    setTimeout(() => {
+      btn.textContent = 'Send Message';
+      btn.style.background = '';
+      btn.disabled = false;
+      form.reset();
+    }, 3000);
+  } catch (err) {
+    console.error('Lead form error:', err);
+    btn.textContent = 'Error — Please Call Tina';
+    btn.style.background = '#DC2626';
+    setTimeout(() => {
+      btn.textContent = 'Send Message';
+      btn.style.background = '';
+      btn.disabled = false;
+    }, 3000);
+  }
 });
 
 // ===== CHATBOT =====
@@ -113,9 +64,7 @@ const inputEl = document.getElementById('chatInput');
 const sendBtn = document.getElementById('chatSend');
 
 // Conversation history for GPT (maintains context)
-const conversationHistory = [
-  { role: 'system', content: SYSTEM_PROMPT }
-];
+const conversationHistory = [];
 
 launcher.addEventListener('click', () => {
   chatbot.classList.add('open');
@@ -159,29 +108,20 @@ function removeTyping() {
 async function sendToGPT(userMessage) {
   conversationHistory.push({ role: 'user', content: userMessage });
 
-  const response = await fetch('https://api.openai.com/v1/chat/completions', {
+  const response = await fetch('/api/chat', {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${OPENAI_API_KEY}`
-    },
-    body: JSON.stringify({
-      model: 'gpt-4o-mini',
-      messages: conversationHistory,
-      max_tokens: 300,
-      temperature: 0.7
-    })
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ messages: conversationHistory })
   });
 
   if (!response.ok) {
     const err = await response.json().catch(() => ({}));
-    throw new Error(err.error?.message || `API error ${response.status}`);
+    throw new Error(err.error || `API error ${response.status}`);
   }
 
   const data = await response.json();
-  const reply = data.choices[0].message.content.trim();
-  conversationHistory.push({ role: 'assistant', content: reply });
-  return reply;
+  conversationHistory.push({ role: 'assistant', content: data.reply });
+  return data.reply;
 }
 
 async function handleSend() {
@@ -199,16 +139,9 @@ async function handleSend() {
   showTyping();
 
   try {
-    if (OPENAI_API_KEY === 'YOUR_OPENAI_API_KEY_HERE') {
-      // Demo fallback if no key is set
-      await new Promise(r => setTimeout(r, 900));
-      removeTyping();
-      addMessage("Hi! I'm Tina. To activate live chat, add your OpenAI API key to script.js. In the meantime, you're welcome to call or text me directly at **256-530-9221** or email **contactpocketfullofhelp@gmail.com** 😊", 'bot');
-    } else {
-      const reply = await sendToGPT(text);
-      removeTyping();
-      addMessage(reply, 'bot');
-    }
+    const reply = await sendToGPT(text);
+    removeTyping();
+    addMessage(reply, 'bot');
   } catch (err) {
     removeTyping();
     addMessage(`Sorry, I ran into an issue connecting right now. Please reach out to Tina directly at **256-530-9221** or **contactpocketfullofhelp@gmail.com** — she'd love to help! 😊`, 'bot');
