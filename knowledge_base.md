@@ -116,6 +116,7 @@
 | Detail | Information |
 |---|---|
 | **Phone** | 256-530-9221 |
+| **WhatsApp** | 205-723-2082 |
 | **Email** | contactpocketfullofhelp@gmail.com |
 | **Facebook** | https://www.facebook.com/people/Pocket-Full-of-Help/ |
 | **Hours** | Monday – Sunday, 8:00am – 10:00pm (flexible, available for emergencies) |
@@ -176,7 +177,7 @@ A: $75–$150 for individual W-2 returns.
 A: Oxford, Anniston, Lincoln, Jacksonville, and nearby Eastern Alabama communities.
 
 **Q: How do I book a service?**
-A: Call 256-530-9221, email contactpocketfullofhelp@gmail.com, or use the contact form on the website.
+A: Call or text 256-530-9221, message on WhatsApp at 205-723-2082, email contactpocketfullofhelp@gmail.com, or use the contact form on the website.
 
 ---
 

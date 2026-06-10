@@ -395,6 +395,7 @@ body::after {
 }
 .contact-item:hover { background: var(--white); border-color: var(--blue-border); box-shadow: var(--shadow-sm); }
 .contact-icon { font-size: 22px; margin-top: 2px; flex-shrink: 0; }
+.contact-icon--whatsapp { display: flex; color: #25D366; }
 .contact-item div { display: flex; flex-direction: column; gap: 2px; }
 .contact-item strong { color: var(--text); font-size: 14px; font-weight: 600; }
 .contact-item span { color: var(--muted); font-size: 14px; }
@@ -424,9 +425,24 @@ body::after {
 .footer-tagline { color: var(--muted); font-size: 14px; }
 .footer-copy { color: var(--muted); font-size: 13px; opacity: 0.7; }
 
+/* ===== FLOATING ACTIONS ===== */
+.float-actions {
+  position: fixed; bottom: 28px; right: 28px; z-index: 999;
+  display: flex; align-items: center; gap: 14px;
+}
+
+/* ===== WHATSAPP ===== */
+.whatsapp-launcher {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: #25D366; color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 28px rgba(37,211,102,0.42);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.whatsapp-launcher:hover { transform: translateY(-3px); box-shadow: 0 12px 36px rgba(37,211,102,0.54); }
+
 /* ===== CHATBOT ===== */
 .chat-launcher {
-  position: fixed; bottom: 28px; right: 28px; z-index: 999;
   background: linear-gradient(135deg, var(--blue) 0%, #2389E8 100%);
   color: #fff; border-radius: 50px; padding: 14px 22px;
   display: flex; align-items: center; gap: 10px;
@@ -587,13 +603,14 @@ body::after {
 
   /* --- Chatbot --- */
   .chatbot { width: calc(100vw - 24px); right: 12px; bottom: 80px; }
+  .float-actions { bottom: 16px; right: 16px; gap: 10px; }
   .chat-launcher {
     padding: 14px; border-radius: 50%;
     width: 54px; height: 54px; justify-content: center;
-    bottom: 16px; right: 16px;
   }
   .chat-launcher-label { display: none; }
   .chat-launcher-icon { font-size: 22px; }
+  .whatsapp-launcher { width: 50px; height: 50px; }
 }
 
 /* Extra small phones */
