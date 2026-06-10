@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pocket Full of Help</title>
+  <title>Pocket Full of Help — Oxford, AL</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -18,59 +18,149 @@
         <img src="pocket full logo.png" alt="Pocket Full of Help" class="logo-img" />
       </a>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#services">Rates</a></li>
-        <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact" class="nav-cta">Book Now</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
     </div>
     <div class="mobile-menu" id="mobileMenu">
-      <a href="#about">About</a>
       <a href="#services">Services</a>
-      <a href="#services">Rates</a>
-      <a href="#contact">Get in Touch</a>
+      <a href="#about">About Tina</a>
+      <a href="#contact">Book Now</a>
+      <a href="tel:2565309221" class="mobile-call">📞 Call 256-530-9221</a>
     </div>
   </nav>
 
   <!-- HERO -->
   <section class="hero" id="home">
-    <div class="hero-content">
-      <div class="hero-badge">Serving Oxford &amp; Eastern Alabama</div>
-      <h1 class="hero-title">
-        Life's Busy.<br />
-        <span class="accent-text">We've Got You.</span>
-      </h1>
-      <p class="hero-sub">Trusted childcare, errand running, and tax preparation — brought right to your door by Tina, your reliable neighbor in Oxford, AL.</p>
-      <div class="hero-actions">
-        <a href="#services" class="btn btn-primary">Explore Services</a>
-        <a href="#contact" class="btn btn-outline">Book a Call</a>
+    <div class="hero-inner">
+      <div class="hero-photo-side">
+        <img src="Tina Image.avif" alt="Tina" class="hero-tina-photo" />
+        <div class="hero-location-tag">📍 Oxford, Alabama</div>
       </div>
-      <div class="hero-stats">
-        <div class="stat"><strong>3</strong><span>Services</span></div>
-        <div class="stat-divider"></div>
-        <div class="stat"><strong>CPR</strong><span>Certified</span></div>
-        <div class="stat-divider"></div>
-        <div class="stat"><strong>Oxford, AL</strong><span>Based</span></div>
+      <div class="hero-text-side">
+        <div class="hero-intro">Hi, I'm Tina 👋</div>
+        <h1 class="hero-title">Childcare, Errands &amp; Tax Prep —<br/><span class="accent-text">I Come to You</span></h1>
+        <p class="hero-sub">A trusted neighbor in Oxford, AL offering three essential services — all in the comfort of your own home.</p>
+
+        <div class="hero-services-row">
+          <div class="hero-svc-chip">
+            <img src="Gemini_Generated_Boy.png" alt="" />
+            <span>Child Care</span>
+          </div>
+          <div class="hero-svc-chip">
+            <img src="Gemini_Generated_Errands.png" alt="" />
+            <span>Errands</span>
+          </div>
+          <div class="hero-svc-chip tax-chip">
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=120&q=70" alt="" />
+            <span>Tax Prep</span>
+          </div>
+        </div>
+
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-primary">Book a Service</a>
+          <a href="tel:2565309221" class="btn btn-call">📞 256-530-9221</a>
+        </div>
+
+        <div class="hero-trust">
+          <span>✓ CPR Certified</span>
+          <span>✓ First Aid Trained</span>
+          <span>✓ Comes to you</span>
+        </div>
       </div>
     </div>
-    <div class="hero-mosaic">
-      <div class="mosaic-large">
-        <img src="Gemini_Generated_Boy.png" alt="Childcare" />
-        <div class="mosaic-label"><strong>Child Care</strong><span>In-home · Newborns to age 2</span></div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">What Tina Offers</div>
+        <h2 class="section-title">Three Services, <span class="accent-text">One Person You Can Trust</span></h2>
       </div>
-      <div class="mosaic-col">
-        <div class="mosaic-small">
-          <img src="Gemini_Generated_Errands.png" alt="Errand Running" />
-          <div class="mosaic-label"><strong>Errand Running</strong><span>Groceries · Prescriptions</span></div>
+
+      <div class="svc-cards">
+
+        <div class="svc-card">
+          <div class="svc-card-img">
+            <img src="Gemini_Generated_Boy.png" alt="Child Care" />
+            <div class="svc-card-num">01</div>
+          </div>
+          <div class="svc-card-body">
+            <h3>Child Care</h3>
+            <p>Loving in-home care for newborns to 2-year-olds. Tina comes to your home — no drop-offs, no strangers.</p>
+            <ul>
+              <li>Newborns to 2-year-olds</li>
+              <li>Up to 4 hours/day</li>
+              <li>CPR &amp; First Aid certified</li>
+              <li>In-home only</li>
+            </ul>
+            <div class="svc-card-footer">
+              <div class="svc-price-tag">
+                <strong>$15–$22</strong>
+                <span>per session · 1 child</span>
+              </div>
+              <a href="#contact" class="btn btn-primary">Book</a>
+            </div>
+          </div>
         </div>
-        <div class="mosaic-small">
-          <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&q=80" alt="Tax Preparation" />
-          <div class="mosaic-label"><strong>Tax Preparation</strong><span>W-2 Returns · $75–$150</span></div>
+
+        <div class="svc-card svc-card--featured">
+          <div class="svc-featured-badge">Most Requested</div>
+          <div class="svc-card-img">
+            <img src="Gemini_Generated_Errands.png" alt="Errand Running" />
+            <div class="svc-card-num">02</div>
+          </div>
+          <div class="svc-card-body">
+            <h3>Errand Running</h3>
+            <p>Groceries, prescriptions, mail, business errands — Tina handles the tasks that eat up your day.</p>
+            <ul>
+              <li>Grocery shopping &amp; delivery</li>
+              <li>Prescription pickups</li>
+              <li>Mail &amp; packages</li>
+              <li>Business errands</li>
+            </ul>
+            <div class="svc-card-footer">
+              <div class="svc-price-tag">
+                <strong>$15–$22</strong>
+                <span>per hour</span>
+              </div>
+              <a href="#contact" class="btn btn-primary">Book</a>
+            </div>
+          </div>
         </div>
+
+        <div class="svc-card">
+          <div class="svc-card-img">
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80" alt="Tax Preparation" />
+            <div class="svc-card-num">03</div>
+          </div>
+          <div class="svc-card-body">
+            <h3>Tax Preparation</h3>
+            <p>W-2 tax filing done accurately and on time. Tina maximizes your refund and keeps everything confidential.</p>
+            <ul>
+              <li>W-2 filers only</li>
+              <li>Accurate &amp; on time</li>
+              <li>Refund maximization</li>
+              <li>100% confidential</li>
+            </ul>
+            <div class="svc-card-footer">
+              <div class="svc-price-tag">
+                <strong>$75–$150</strong>
+                <span>flat fee</span>
+              </div>
+              <a href="#contact" class="btn btn-primary">Book</a>
+            </div>
+          </div>
+        </div>
+
       </div>
+
+      <p class="services-note">Prices are estimates — Tina is happy to work with your budget. <a href="#contact">Ask her →</a></p>
     </div>
   </section>
 
@@ -78,28 +168,24 @@
   <section class="about section" id="about">
     <div class="container">
       <div class="about-grid">
-        <div class="about-visual">
-          <div class="about-card-main">
-            <div class="about-avatar-wrap">
-              <img src="Tina Image.avif" alt="Tina" class="about-photo" />
-            </div>
-            <h3>Tina</h3>
-            <p>Owner &amp; Founder</p>
-            <div class="about-badges">
-              <span class="badge">CPR Certified</span>
-              <span class="badge">First Aid</span>
-              <span class="badge">30hrs Childcare Training</span>
-            </div>
+        <div class="about-card">
+          <div class="about-avatar-wrap">
+            <img src="Tina Image.avif" alt="Tina" class="about-photo" />
           </div>
-          <div class="about-card-quote">
-            <p>"In every pocket, a promise: to uplift working people with heartfelt support and reliable services."</p>
+          <h3>Tina</h3>
+          <p class="about-role">Owner &amp; Founder · Oxford, AL</p>
+          <div class="about-badges">
+            <span class="badge">CPR Certified</span>
+            <span class="badge">First Aid</span>
+            <span class="badge">30hrs Training</span>
           </div>
+          <blockquote>"In every pocket, a promise — to uplift working people with heartfelt support."</blockquote>
         </div>
         <div class="about-text">
-          <div class="section-label">About Us</div>
+          <div class="section-label">About Tina</div>
           <h2 class="section-title">A Neighbor You Can <span class="accent-text">Count On</span></h2>
-          <p>Hi, I'm Tina! I started Pocket Full of Help because I know how overwhelming life gets for busy families and working individuals. My mission is simple — to take things off your plate so you can focus on what matters most.</p>
-          <p>I bring 30 hours of professional daycare training, department head experience, CPR &amp; First Aid certification, and a track record of corporate errand work — all backed by a deep commitment to your trust.</p>
+          <p>Hi, I'm Tina! I started Pocket Full of Help because I know how overwhelming life gets. My mission is to take things off your plate so you can focus on what matters most.</p>
+          <p>I bring 30 hours of professional daycare training, CPR &amp; First Aid certification, and years of errand running experience — all backed by a deep commitment to your trust.</p>
           <div class="values-grid">
             <div class="value-item">
               <div class="value-icon">
@@ -132,101 +218,16 @@
     </div>
   </section>
 
-  <!-- SERVICES & PRICING (consolidated) -->
-  <section class="services section" id="services">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-label">Services &amp; Pricing</div>
-        <h2 class="section-title">Everything Tina <span class="accent-text">Does for You</span></h2>
-        <p class="section-desc">Three focused services, transparent pricing — brought right to your door.</p>
-      </div>
-
-      <!-- Service Row 1 -->
-      <div class="svc-row">
-        <div class="svc-image">
-          <img src="Gemini_Generated_Boy.png" alt="Child Care" />
-        </div>
-        <div class="svc-body">
-          <div class="svc-num">01</div>
-          <h3>Child Care</h3>
-          <p>Loving, one-on-one in-home care for your newborn or toddler. Tina comes to you — no drop-offs, no strangers, no stress.</p>
-          <ul class="svc-list">
-            <li>Newborns to 2-year-olds</li>
-            <li>Up to 4 hours per day</li>
-            <li>In-home — no transport needed</li>
-            <li>CPR &amp; First Aid certified</li>
-          </ul>
-          <div class="svc-footer">
-            <div class="svc-price">
-              <span>$15–$22</span><small>per session · 1 child</small>
-              <span>$18–$25</span><small>per session · 2 children</small>
-            </div>
-            <a href="#contact" class="btn btn-primary">Book Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Service Row 2 -->
-      <div class="svc-row svc-row--reverse">
-        <div class="svc-image">
-          <img src="Gemini_Generated_Errands.png" alt="Errand Running" />
-          <div class="svc-badge">Most Requested</div>
-        </div>
-        <div class="svc-body">
-          <div class="svc-num">02</div>
-          <h3>Errand Running</h3>
-          <p>From grocery runs to prescription pickups — Tina handles the tasks that eat up your day so you can focus on what matters.</p>
-          <ul class="svc-list">
-            <li>Grocery shopping &amp; delivery</li>
-            <li>Prescription pickups</li>
-            <li>Mail &amp; package handling</li>
-            <li>Business-to-business errands</li>
-          </ul>
-          <div class="svc-footer">
-            <div class="svc-price">
-              <span>$15–$22</span><small>per hour</small>
-            </div>
-            <a href="#contact" class="btn btn-primary">Book Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Service Row 3 -->
-      <div class="svc-row">
-        <div class="svc-image svc-image--tax">
-          <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80" alt="Tax Preparation" />
-        </div>
-        <div class="svc-body">
-          <div class="svc-num">03</div>
-          <h3>Tax Preparation</h3>
-          <p>Stress-free W-2 tax filing done accurately and on time. Tina focuses on maximizing your refund while keeping everything fully confidential.</p>
-          <ul class="svc-list">
-            <li>W-2 income filers only</li>
-            <li>Accurate &amp; timely submission</li>
-            <li>Refund maximization focus</li>
-            <li>100% confidential</li>
-          </ul>
-          <div class="svc-footer">
-            <div class="svc-price">
-              <span>$75–$150</span><small>flat fee · W-2 only</small>
-            </div>
-            <a href="#contact" class="btn btn-primary">Book Now</a>
-          </div>
-        </div>
-      </div>
-
-      <p class="rates-note">All prices are estimates. Tina is happy to work with your budget. <a href="#contact">Reach out anytime →</a></p>
-    </div>
-  </section>
-
   <!-- CONTACT -->
   <section class="contact section" id="contact">
     <div class="container">
+      <div class="section-header">
+        <div class="section-label">Get in Touch</div>
+        <h2 class="section-title">Ready for a <span class="accent-text">Helping Hand?</span></h2>
+        <p class="section-desc">Fill out the form or reach Tina directly — she usually responds within a few hours.</p>
+      </div>
       <div class="contact-grid">
         <div class="contact-info">
-          <div class="section-label">Get in Touch</div>
-          <h2 class="section-title">Ready to Get <span class="accent-text">Some Help?</span></h2>
-          <p>Fill out the form and Tina will get back to you promptly. Or reach out directly — she'd love to hear from you.</p>
           <div class="contact-details">
             <a href="tel:2565309221" class="contact-item">
               <span class="contact-icon">📞</span>
@@ -238,7 +239,7 @@
             </a>
             <a href="https://www.facebook.com/people/Pocket-Full-of-Help/" target="_blank" class="contact-item">
               <span class="contact-icon">📘</span>
-              <div><strong>Facebook</strong><span>Follow us for updates</span></div>
+              <div><strong>Facebook</strong><span>Follow for updates</span></div>
             </a>
             <div class="contact-item">
               <span class="contact-icon">📍</span>
@@ -262,12 +263,12 @@
             <input type="email" placeholder="jane@example.com" required />
           </div>
           <div class="form-group">
-            <label>Phone Number *</label>
+            <label>Phone *</label>
             <input type="tel" placeholder="256-000-0000" required />
           </div>
           <div class="form-group">
             <label>How can Tina help? *</label>
-            <textarea rows="4" placeholder="Tell me what you need — childcare, errands, tax prep, or a mix..." required></textarea>
+            <textarea rows="4" placeholder="Childcare, errands, tax prep, or a mix..." required></textarea>
           </div>
           <button type="submit" class="btn btn-primary btn-full">Send Message</button>
           <p class="form-note">Tina typically responds within a few hours.</p>
@@ -280,9 +281,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-inner">
-        <div class="footer-brand">
-          <img src="pocket full logo.png" alt="Pocket Full of Help" class="footer-logo-img" />
-        </div>
+        <img src="pocket full logo.png" alt="Pocket Full of Help" class="footer-logo-img" />
         <p class="footer-tagline">Running out of time? We've got you.</p>
         <p class="footer-copy">© 2025 Pocket Full of Help · Oxford, Alabama · All rights reserved.</p>
       </div>
@@ -311,7 +310,7 @@
         <div class="msg-bubble">Hi there! 👋 I'm Tina. Ask me anything about my services, pricing, or how to get started — I'd love to help!</div>
       </div>
       <div class="msg-suggestions">
-        <button class="suggestion" onclick="askSuggestion('What services do you offer?')">What services do you offer?</button>
+        <button class="suggestion" onclick="askSuggestion('What services do you offer?')">What services?</button>
         <button class="suggestion" onclick="askSuggestion('How much does childcare cost?')">Childcare pricing?</button>
         <button class="suggestion" onclick="askSuggestion('What areas do you serve?')">Service area?</button>
         <button class="suggestion" onclick="askSuggestion('How do I book a service?')">How to book?</button>
