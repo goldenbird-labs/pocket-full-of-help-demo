@@ -462,6 +462,7 @@ body::after {
 .footer-logo-img { height: 72px; width: auto; display: block; }
 .footer-tagline { color: var(--muted); font-size: 14px; }
 .footer-copy { color: var(--muted); font-size: 13px; opacity: 0.7; }
+.footer-ada { color: var(--muted); font-size: 12px; opacity: 0.6; margin-top: 6px; }
 
 /* ===== FLOATING ACTIONS ===== */
 .float-actions {
