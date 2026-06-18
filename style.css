@@ -1,3 +1,20 @@
+/* ===== SKIP LINK (ADA) ===== */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: var(--blue);
+  color: #fff;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  z-index: 10000;
+  border-radius: 0 0 6px 0;
+  text-decoration: none;
+  transition: top 0.1s;
+}
+.skip-link:focus { top: 0; }
+
 /* ===== RESET & TOKENS ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 

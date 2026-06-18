@@ -7,9 +7,17 @@ window.addEventListener('scroll', () => {
 // ===== HAMBURGER =====
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
-hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+hamburger.addEventListener('click', () => {
+  const isOpen = mobileMenu.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', isOpen);
+  hamburger.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+});
 mobileMenu.querySelectorAll('a').forEach(a =>
-  a.addEventListener('click', () => mobileMenu.classList.remove('open'))
+  a.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('aria-label', 'Open navigation menu');
+  })
 );
 
 // ===== CONTACT FORM =====
